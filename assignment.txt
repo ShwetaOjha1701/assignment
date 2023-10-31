@@ -1,0 +1,62 @@
+Endpoints
+1. Add a New Book
+URL: http://localhost:3000/api/books
+Method: POST
+Request Body:{    
+    "title":"Computer Application1 ",
+    "author":"CA1",
+    "summary":"Books about Computer Application knowledge1 "
+}
+Response: {"title":"Computer Application1 ","author":"CA1","summary":"Books about Computer Application knowledge1 ","_id":"654149280b9798b3218687db","__v":0}
+
+
+200 OK - Book added successfully.
+
+
+2. View a List of All Books
+URL: http://localhost:3000/api/books
+Method: GET
+Response:[{"_id":"65413db60b9798b3218687d5","title":"Computer Application ","author":"CA","summary":"Books about Computer Application knowledge ","__v":0},{"_id":"654149280b9798b3218687db","title":"Computer Application1 ","author":"CA1","summary":"Books about Computer Application knowledge1 ","__v":0}]
+
+
+3. View Details of a Specific Book by its ID
+URL: http://localhost:3000/api/books/65413db60b9798b3218687d5
+Method: GET
+Response:{"_id":"65413db60b9798b3218687d5","title":"Computer Application ","author":"CA","summary":"Books about Computer Application knowledge ","__v":0}
+
+
+200 OK - Book details updated successfully.
+404 Not Found - If the book with the specified ID does not exist.
+
+
+4. Update a Book's Details
+URL:http://localhost:3000/api/books/65413db60b9798b3218687d5
+Method: PUT
+Request Body:200 OK
+{"_id":"65413db60b9798b3218687d5","title":"Computer Application2 ","author":"CA2","summary":"Books about Computer Application knowledge1 ","__v":0}
+
+
+
+
+5.Delete a Book
+URL: http://localhost:3000/api/books/65413db60b9798b3218687d5
+
+Method: DELETE
+
+Response:200 OK
+
+204 No Content - Book deleted successfully.
+404 Not Found - If the book with the specified ID does not exist.
+
+
+
+
+
+
+
+
+
+
+
+
+
